@@ -22,6 +22,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     cities = delegate.cities;
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,14 +40,39 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    City *city = [cities objectAtIndex:indexPath.row];
-    cell.textLabel.text = city.cityName;
+    if (indexPath.row < cities.count){
+        City *city = [cities objectAtIndex:indexPath.row];
+        cell.textLabel.text = city.cityName;
+    }else{
+        cell.textLabel.text = @"Adicionar nova cidade...";
+        cell.textLabel.textColor = [UIColor lightGrayColor];
+        cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [cities count];
+    NSInteger count = [cities count];
+    
+    if (self.editing){
+        count = count + 1;
+    }
+    
+    return count;
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated{
+    if (editing != self.editing){
+        [super setEditing:editing animated:animated];
+        [self.tableView setEditing:editing animated:animated];
+        NSArray *indexies = [NSArray arrayWithObject: [NSIndexPath indexPathForRow:cities.count inSection:0]];
+        if (editing == YES){
+            [self.tableView insertRowsAtIndexPaths:indexies withRowAnimation:UITableViewRowAnimationLeft];
+        }else{
+            [self.tableView deleteRowsAtIndexPaths:indexies withRowAnimation:UITableViewRowAnimationLeft];
+        }
+    }
 }
 
 #pragma mark UITableViewDataDelegate methods
@@ -54,6 +81,14 @@
     selectedIndex = indexPath.row;
     [self performSegueWithIdentifier:@"SegueToDetailPage" sender:self];
     [tv deselectRowAtIndexPath:indexPath animated: YES];
+}
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row < cities.count){
+        return UITableViewCellEditingStyleDelete;
+    }else{
+        return UITableViewCellEditingStyleInsert;
+    }
 }
 
 #pragma mark - Navigation

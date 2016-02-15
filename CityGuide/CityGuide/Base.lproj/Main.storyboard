@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" title="Guia da cidade" id="SyI-zf-1e3"/>
                     <connections>
                         <outlet property="tableView" destination="WHC-Bf-78T" id="R2m-zC-vJq"/>
-                        <segue destination="LuP-5Y-Fga" kind="push" identifier="SegueToDetailPage" id="Lig-OJ-uJg"/>
+                        <segue destination="LuP-5Y-Fga" kind="show" identifier="SegueToDetailPage" id="8bj-ls-0Vz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

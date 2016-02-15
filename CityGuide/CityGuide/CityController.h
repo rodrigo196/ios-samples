@@ -10,7 +10,7 @@
 #import "City.h"
 
 @interface CityController : UIViewController{
-    IBOutlet UIImageView *picture;
+    __weak IBOutlet UIImageView *picture;
     __weak IBOutlet UITextView *descriptionView;
 }
 
