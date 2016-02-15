@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E9A3BEA1C72618C002E0CAE /* NewCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A3BE91C72618C002E0CAE /* NewCityViewController.m */; };
 		7EC8C1F61C6FAC3B001A293F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8C1F51C6FAC3B001A293F /* main.m */; };
 		7EC8C1F91C6FAC3B001A293F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8C1F81C6FAC3B001A293F /* AppDelegate.m */; };
 		7EC8C1FC1C6FAC3B001A293F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8C1FB1C6FAC3B001A293F /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E9A3BE81C72618C002E0CAE /* NewCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCityViewController.h; sourceTree = "<group>"; };
+		7E9A3BE91C72618C002E0CAE /* NewCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCityViewController.m; sourceTree = "<group>"; };
 		7EC8C1F11C6FAC3B001A293F /* CityGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC8C1F51C6FAC3B001A293F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EC8C1F71C6FAC3B001A293F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				7EC8C20C1C6FB0C6001A293F /* City.m */,
 				7EC8C21C1C6FC3DF001A293F /* CityController.h */,
 				7EC8C21D1C6FC3DF001A293F /* CityController.m */,
+				7E9A3BE81C72618C002E0CAE /* NewCityViewController.h */,
+				7E9A3BE91C72618C002E0CAE /* NewCityViewController.m */,
 			);
 			path = CityGuide;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				7EC8C21E1C6FC3DF001A293F /* CityController.m in Sources */,
 				7EC8C1F91C6FAC3B001A293F /* AppDelegate.m in Sources */,
 				7EC8C20D1C6FB0C6001A293F /* City.m in Sources */,
+				7E9A3BEA1C72618C002E0CAE /* NewCityViewController.m in Sources */,
 				7EC8C1F61C6FAC3B001A293F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +333,7 @@
 				7EC8C20A1C6FAC3B001A293F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

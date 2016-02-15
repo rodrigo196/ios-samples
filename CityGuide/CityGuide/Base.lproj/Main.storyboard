@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-Bf-78T">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-Bf-78T">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -64,7 +64,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2K-QT-5Be">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2K-QT-5Be">
                                 <rect key="frame" x="171" y="91" width="258" height="188"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="awC-6M-Kls"/>
@@ -92,6 +92,75 @@
             </objects>
             <point key="canvasLocation" x="1869" y="429"/>
         </scene>
+        <!--New City View Controller-->
+        <scene sceneID="muH-In-Yzb">
+            <objects>
+                <viewController id="JgV-Yf-GVG" customClass="NewCityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u8l-l0-hs4"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBq-i0-q5y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U5k-06-cdn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira o nome da cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WmJ-4k-RkL">
+                                <rect key="frame" x="20" y="58" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da cidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVT-tC-N5F">
+                                <rect key="frame" x="20" y="20" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnC-Qx-XU5">
+                                <rect key="frame" x="20" y="108" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zZL-Vb-CLh">
+                                <rect key="frame" x="20" y="137" width="560" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="baf-vE-BHO"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILC-W0-kJM">
+                                <rect key="frame" x="241" y="402" width="118" height="30"/>
+                                <state key="normal" title="Cadastrar cidade"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zZL-Vb-CLh" firstAttribute="trailing" secondItem="U5k-06-cdn" secondAttribute="trailingMargin" id="3km-0v-5RJ"/>
+                            <constraint firstItem="tVT-tC-N5F" firstAttribute="top" secondItem="u8l-l0-hs4" secondAttribute="bottom" id="K5S-PT-hy6"/>
+                            <constraint firstItem="ILC-W0-kJM" firstAttribute="top" secondItem="zZL-Vb-CLh" secondAttribute="bottom" constant="55" id="Mu9-1P-fd8"/>
+                            <constraint firstItem="zZL-Vb-CLh" firstAttribute="top" secondItem="jnC-Qx-XU5" secondAttribute="bottom" constant="8" symbolic="YES" id="byl-mo-Eqa"/>
+                            <constraint firstItem="tVT-tC-N5F" firstAttribute="leading" secondItem="U5k-06-cdn" secondAttribute="leadingMargin" id="d3s-4n-R4z"/>
+                            <constraint firstItem="jnC-Qx-XU5" firstAttribute="top" secondItem="WmJ-4k-RkL" secondAttribute="bottom" constant="20" id="ntn-fS-nY0"/>
+                            <constraint firstItem="zZL-Vb-CLh" firstAttribute="centerX" secondItem="ILC-W0-kJM" secondAttribute="centerX" id="ryi-gq-sls"/>
+                            <constraint firstItem="zZL-Vb-CLh" firstAttribute="trailing" secondItem="WmJ-4k-RkL" secondAttribute="trailing" id="sxW-4L-4Wg"/>
+                            <constraint firstItem="WmJ-4k-RkL" firstAttribute="top" secondItem="tVT-tC-N5F" secondAttribute="bottom" constant="17" id="tf4-YN-IL6"/>
+                            <constraint firstItem="tVT-tC-N5F" firstAttribute="leading" secondItem="zZL-Vb-CLh" secondAttribute="leading" id="uJC-rh-Teb"/>
+                            <constraint firstItem="tVT-tC-N5F" firstAttribute="leading" secondItem="WmJ-4k-RkL" secondAttribute="leading" id="uis-9g-enD"/>
+                            <constraint firstItem="tVT-tC-N5F" firstAttribute="leading" secondItem="jnC-Qx-XU5" secondAttribute="leading" id="yD8-Le-gO1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SegueToNewCity" id="IYh-2s-Zb3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyK-ya-lLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="1223"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xWq-Zr-KJ0">
             <objects>
@@ -111,4 +180,7 @@
             <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IYh-2s-Zb3"/>
+    </inferredMetricsTieBreakers>
 </document>
