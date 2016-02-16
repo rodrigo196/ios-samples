@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = "Noticias"
+        self.loadData(NSURL(string: "http://www.raywenderlich.com/51127/nsurlsession-tutorial")!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +38,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("SegueToDetails", sender: self)
+    }
+    
+    func loadData(url:NSURL) -> Void {
+        let session:NSURLSession = NSURLSession()
+        session.dataTaskWithURL(url) { (let data:NSData?, let response:NSURLResponse?, let error:NSError?) -> Void in
+            print(data)
+        }
     }
 }
 
