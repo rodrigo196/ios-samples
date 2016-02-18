@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,22 +22,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="QoD-Fg-wkN" style="IBUITableViewCellStyleDefault" id="j2J-i7-Y1p">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="QoD-Fg-wkN" style="IBUITableViewCellStyleDefault" id="j2J-i7-Y1p">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j2J-i7-Y1p" id="Faj-oq-CFF">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QoD-Fg-wkN">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -63,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="2225" y="-214"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="uql-j7-17C">
             <objects>
-                <viewController id="JEX-Pd-dbP" sceneMemberID="viewController">
+                <viewController id="JEX-Pd-dbP" customClass="DetailsViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YnL-3W-j3a"/>
                         <viewControllerLayoutGuide type="bottom" id="kPl-Jh-ci7"/>
@@ -74,8 +76,23 @@
                     <view key="view" contentMode="scaleToFill" id="QOw-dz-wlo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-6l-gef">
+                                <rect key="frame" x="0.0" y="64" width="605" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rgx-6l-gef" secondAttribute="trailing" constant="-25" id="M6g-sO-FIU"/>
+                            <constraint firstItem="Rgx-6l-gef" firstAttribute="leading" secondItem="QOw-dz-wlo" secondAttribute="leading" id="dLM-Gg-SSJ"/>
+                            <constraint firstItem="Rgx-6l-gef" firstAttribute="top" secondItem="YnL-3W-j3a" secondAttribute="bottom" id="eug-Wt-4Gu"/>
+                            <constraint firstItem="Rgx-6l-gef" firstAttribute="bottom" secondItem="kPl-Jh-ci7" secondAttribute="top" id="vRf-R2-Sfu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="Rgx-6l-gef" id="I53-yv-HRT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l12-sf-ino" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

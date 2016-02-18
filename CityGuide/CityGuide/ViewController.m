@@ -22,7 +22,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     cities = delegate.cities;
-    
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
