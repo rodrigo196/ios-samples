@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
     {
         element = elementName
-        if (elementName as NSString).isEqualToString("entry")
+        if (elementName as NSString).isEqualToString("title")
         {
             elements = NSMutableDictionary()
             elements = [:]
@@ -101,7 +101,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     {
-        if (elementName as NSString).isEqualToString("link") {
+        if (elementName as NSString).isEqualToString("entry") {
             if !title1.isEqual(nil) {
                 elements.setObject(title1, forKey: "title")
             }
@@ -113,10 +113,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let indexPath = tableNewsFeed.indexPathForSelectedRow
         if segue.identifier == "SegueToDetails" {
             let viewController:DetailsViewController = segue.destinationViewController as! DetailsViewController
-            viewController.news = posts[(tableNewsFeed.indexPathForSelectedRow?.row)!] as! NSMutableDictionary
+            viewController.news = posts[(indexPath?.row)!] as! NSMutableDictionary
+            tableNewsFeed.deselectRowAtIndexPath(indexPath!, animated: true)
         }
+        
     }
 }
 

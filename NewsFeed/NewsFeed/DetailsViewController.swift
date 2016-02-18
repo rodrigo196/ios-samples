@@ -17,7 +17,8 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         print(news)
         self.navigationItem.title = news["title"] as? String
-        webView.loadRequest(NSURLRequest(URL: NSURL(string: (news["link"] as? String)!)!))
+        let url = (news["link"] as? String)!
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
         // Do any additional setup after loading the view.
     }
 

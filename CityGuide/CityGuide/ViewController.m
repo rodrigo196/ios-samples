@@ -78,7 +78,11 @@
 
 -(void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     selectedIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"SegueToDetailPage" sender:self];
+    if (selectedIndex < cities.count){
+        [self performSegueWithIdentifier:@"SegueToDetailPage" sender:self];
+    }else{
+        [self performSegueWithIdentifier:@"SegueToNewCity" sender:self];
+    }
     [tv deselectRowAtIndexPath:indexPath animated: YES];
 }
 
