@@ -78,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-6l-gef">
-                                <rect key="frame" x="0.0" y="64" width="605" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="605" height="600"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
@@ -86,7 +86,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Rgx-6l-gef" secondAttribute="trailing" constant="-25" id="M6g-sO-FIU"/>
                             <constraint firstItem="Rgx-6l-gef" firstAttribute="leading" secondItem="QOw-dz-wlo" secondAttribute="leading" id="dLM-Gg-SSJ"/>
-                            <constraint firstItem="Rgx-6l-gef" firstAttribute="top" secondItem="YnL-3W-j3a" secondAttribute="bottom" id="eug-Wt-4Gu"/>
+                            <constraint firstItem="Rgx-6l-gef" firstAttribute="top" secondItem="YnL-3W-j3a" secondAttribute="bottom" constant="-64" id="eug-Wt-4Gu"/>
                             <constraint firstItem="Rgx-6l-gef" firstAttribute="bottom" secondItem="kPl-Jh-ci7" secondAttribute="top" id="vRf-R2-Sfu"/>
                         </constraints>
                     </view>

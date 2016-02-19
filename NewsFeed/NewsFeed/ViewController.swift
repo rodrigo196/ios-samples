@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var element = NSString()
     var title1 = NSMutableString()
     var link:String = ""
-    let url:String = "http://m.app.uol.com.br/aplicativo/uol/noticias/ultimas-noticias/noticias/"
+    let url:String = "http://m.app.uol.com.br/aplicativo/uol/noticias/ultimas-noticias/noticias/?plataforma=android"
     
     
     override func viewDidLoad() {
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             title1 = NSMutableString()
             title1 = ""
             link = ""
-        }else if (element as NSString).isEqualToString("link"){
+        }else if (element as NSString).isEqualToString("link") &&  attributeDict["rel"] != nil && (attributeDict["rel"]! as NSString).isEqualToString("alternate"){
             if let href = attributeDict["href"]{
                 link = href
             }else{
